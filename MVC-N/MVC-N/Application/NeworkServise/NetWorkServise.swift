@@ -9,28 +9,24 @@
 import Foundation
 
 class NetworkServise {
-    private init() {
     
-    }
+    private init() {}
     static let shared = NetworkServise()
     
     public func getData(url: URL, completion: @escaping (Any) -> ()) {
         let session = URLSession.shared
         
-        session.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts/1/cooments")!) { (data, response, error) in
-            guard let data  = data else { return }
+        session.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
        
-            do { let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                DispatchQueue.main.async {
+                    completion(json)
+                }
             } catch {
                 print(error)
-                
             }
-        
-        
-        }
-        
-        
-        
+        } .resume()
     }
 }

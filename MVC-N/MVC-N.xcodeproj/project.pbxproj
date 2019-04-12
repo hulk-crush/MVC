@@ -10,6 +10,9 @@
 		8413E29A225F8071003E59E4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413E299225F8071003E59E4 /* CommentCell.swift */; };
 		8413E29C225F817E003E59E4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413E29B225F817E003E59E4 /* Comment.swift */; };
 		8413E29F225FA447003E59E4 /* NetWorkServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413E29E225FA447003E59E4 /* NetWorkServise.swift */; };
+		8413E2A12260831F003E59E4 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413E2A02260831F003E59E4 /* GetCommentResponse.swift */; };
+		8413E2A522608404003E59E4 /* CommentNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413E2A422608404003E59E4 /* CommentNetworkService.swift */; };
+		8413E2A72260887C003E59E4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413E2A62260887C003E59E4 /* NetworkError.swift */; };
 		849AB86F225E600D0047CCF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849AB86E225E600D0047CCF7 /* AppDelegate.swift */; };
 		849AB871225E600D0047CCF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849AB870225E600D0047CCF7 /* ViewController.swift */; };
 		849AB874225E600D0047CCF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849AB872225E600D0047CCF7 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 		8413E299225F8071003E59E4 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		8413E29B225F817E003E59E4 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8413E29E225FA447003E59E4 /* NetWorkServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkServise.swift; sourceTree = "<group>"; };
+		8413E2A02260831F003E59E4 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
+		8413E2A422608404003E59E4 /* CommentNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkService.swift; sourceTree = "<group>"; };
+		8413E2A62260887C003E59E4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		849AB86B225E600D0047CCF7 /* MVC-N.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVC-N.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849AB86E225E600D0047CCF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849AB870225E600D0047CCF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +50,7 @@
 		8413E294225F7C38003E59E4 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				8413E2A3226083CB003E59E4 /* CommentNetworkService */,
 				8413E297225F7CC5003E59E4 /* Model */,
 				8413E296225F7CBC003E59E4 /* View */,
 				8413E295225F7CA5003E59E4 /* Controller */,
@@ -72,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				8413E29B225F817E003E59E4 /* Comment.swift */,
+				8413E2A22260834D003E59E4 /* Responses */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +99,22 @@
 				8413E29E225FA447003E59E4 /* NetWorkServise.swift */,
 			);
 			path = NeworkServise;
+			sourceTree = "<group>";
+		};
+		8413E2A22260834D003E59E4 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				8413E2A02260831F003E59E4 /* GetCommentResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		8413E2A3226083CB003E59E4 /* CommentNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				8413E2A422608404003E59E4 /* CommentNetworkService.swift */,
+			);
+			path = CommentNetworkService;
 			sourceTree = "<group>";
 		};
 		849AB862225E600D0047CCF7 = {
@@ -122,6 +146,7 @@
 		849AB880225E620A0047CCF7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8413E2A62260887C003E59E4 /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,10 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				849AB871225E600D0047CCF7 /* ViewController.swift in Sources */,
+				8413E2A72260887C003E59E4 /* NetworkError.swift in Sources */,
 				8413E29F225FA447003E59E4 /* NetWorkServise.swift in Sources */,
 				849AB86F225E600D0047CCF7 /* AppDelegate.swift in Sources */,
 				8413E29A225F8071003E59E4 /* CommentCell.swift in Sources */,
 				8413E29C225F817E003E59E4 /* Comment.swift in Sources */,
+				8413E2A12260831F003E59E4 /* GetCommentResponse.swift in Sources */,
+				8413E2A522608404003E59E4 /* CommentNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

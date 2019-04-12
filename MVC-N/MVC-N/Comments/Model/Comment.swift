@@ -21,7 +21,7 @@ struct Comment {
               let name = dict["name"] as? String,
               let email = dict["email"] as? String,
               let body = dict["body"] as? String
-            else { return nil }
+          else { return nil }
         
         self.postId = postId
         self.id = id
